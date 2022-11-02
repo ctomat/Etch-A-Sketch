@@ -4,8 +4,6 @@
     width: 500px;
     height: 500px;
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
     margin: 10px auto 10px auto;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
