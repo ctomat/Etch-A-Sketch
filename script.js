@@ -8,10 +8,31 @@ const slider = document.querySelector(".slider");
 function createGrid(gridDimension = 16) {
   for (let index = 0; index < gridDimension ** 2; index++) {
     const grid = document.createElement("div");
+    let hold;
     grid.classList.add("grid");
-    grid.addEventListener("mouseover", () => {
+
+    gridContainer.addEventListener("dragstart", () => {
+      return false;
+    });
+
+    gridContainer.addEventListener("mousedown", () => {
+      hold = true;
+    });
+
+    gridContainer.addEventListener("mouseup", () => {
+      hold = false;
+    });
+
+    grid.addEventListener("mousedown", () => {
       grid.style.backgroundColor = "red";
     });
+
+    grid.addEventListener("mouseenter", () => {
+      if (hold === true) {
+        grid.style.backgroundColor = "red";
+      }
+    });
+
     gridContainer.appendChild(grid);
   }
 }
