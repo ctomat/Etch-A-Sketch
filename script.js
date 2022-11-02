@@ -27,7 +27,7 @@ function createGrid(gridDimension = 16) {
       grid.style.backgroundColor = "red";
     });
 
-    grid.addEventListener("mouseenter", () => {
+    grid.addEventListener("mousemove", () => {
       if (hold === true) {
         grid.style.backgroundColor = "red";
       }
