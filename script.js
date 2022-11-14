@@ -4,6 +4,7 @@ gridContainer.style.gridTemplateColumns = "repeat(16, 1fr)";
 gridContainer.style.gridTemplateRows = "repeat(16, 1fr)";
 
 const slider = document.querySelector(".slider");
+const slideCounter = document.querySelector(".slide-counter");
 
 function createGrid(gridDimension = 16) {
   for (let index = 0; index < gridDimension ** 2; index++) {
@@ -11,8 +12,8 @@ function createGrid(gridDimension = 16) {
     let hold;
     grid.classList.add("grid");
 
-    gridContainer.addEventListener("dragstart", () => {
-      return false;
+    grid.addEventListener("dragstart", (event) => {
+      event.preventDefault();
     });
 
     gridContainer.addEventListener("mousedown", () => {
@@ -38,6 +39,10 @@ function createGrid(gridDimension = 16) {
 }
 
 createGrid();
+
+slider.addEventListener("input", (event) => {
+  slideCounter.textContent = `${event.target.value} x ${event.target.value}`;
+});
 
 slider.addEventListener("change", (event) => {
   const gridDimension = event.target.value;
