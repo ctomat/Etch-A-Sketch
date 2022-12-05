@@ -4,6 +4,20 @@ body {
     background-color: #FFF5E4;
 }
 
+.sketch-container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.draw-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 .title {
     display: flex;
     justify-content: center;
