@@ -1,7 +1,15 @@
 @import url('./reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;700&display=swap');
 
 body {
     background-color: #FFF5E4;
+    font-family: 'Oswald';
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
 }
 
 .sketch-container {
@@ -26,6 +34,8 @@ body {
 .controls-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .container {
@@ -154,4 +164,53 @@ input[type=range]:focus::-ms-fill-lower {
 
 input[type=range]:focus::-ms-fill-upper {
     background: #FFE3E1;
+}
+
+#color-picker {
+    appearance: none;
+    border: none;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+#color-picker::-webkit-color-swatch {
+    border-radius: 15px;
+    border: none;
+}
+
+#color-picker::-moz-color-swatch {
+    border-radius: 15px;
+    border: none;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px auto;
+}
+
+.button {
+    border: #FF9494 solid 5px;
+    background-color: transparent;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all ease-in-out .1s;
+}
+
+.button:hover {
+    background-color: #ff949481;
+    transform: scale(1.1);
+}
+
+.button-press {
+    border-radius: 10px;
+    background-color: #FF9494;
+}
+
+.button-press:hover {
+    background-color: #FF9494;
 }
